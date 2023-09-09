@@ -11,12 +11,10 @@ var currentBalance: Int = 4500
 
 var attempts = 4;
 fun main() {
-  var pin: String
-  println("---------- ATM MACHINE ----------")
+  println("\n---------- ATM MACHINE ----------")
   while(attempts != 0) {
     print("\nEnter your 4-digit PIN: ")
-    pin = readLine()!!
-    if(loginAttempt(pin.toInt())) {
+    if(loginAttempt(readLine()!!.trimIndent().toInt())) {
       mainProgram()
       attempts = 0;
       break
