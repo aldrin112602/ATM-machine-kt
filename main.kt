@@ -10,6 +10,8 @@ val gender: Char = 'M'
 var currentBalance: Int = 4500
 
 var attempts = 4;
+
+
 fun main() {
   println("\n---------- ATM MACHINE ----------")
   while(attempts != 0) {
@@ -146,8 +148,10 @@ fun mainProgram() {
               if(readLine()!!.toLowerCase().trimIndent() == "y") {
               	println("\nThank you for confirming..")
               	println("Logout successfully!")
-              } else println("\nThank you for confirming..")
-              
+                  break
+              } else {
+              	println("\nThank you for confirming..")
+              }
       	}
       	else -> {
      	 	println("Invalid input, Please try again!")
