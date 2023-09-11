@@ -54,7 +54,7 @@ fun mainProgram() {
   
   
   while(true) {
-      println(menuDisplay)
+    println("\n\n$menuDisplay")
   	print("\nChoose a number in `Main Menu` to proceed: ")
   	val inputNumber: Int = readLine()!!.toInt()
       
@@ -62,7 +62,7 @@ fun mainProgram() {
   		1 -> {
               println("\nYour Current Balance is: PHP$currentBalance")
               print("Do you want to continue? (Y/N): ")
-              readLine()!!.toLowerCase().trimIndent() == "n" && break
+              readLine()!!.lowercase().trimIndent() == "n" && break
       	}
       	2 -> {
               var amount: Int
@@ -84,7 +84,7 @@ fun mainProgram() {
               }
       		
               print("\nDo you want to continue? (Y/N): ")
-              (readLine()!!.toLowerCase().trimIndent() == "n") && break
+              (readLine()!!.lowercase().trimIndent() == "n") && break
       	}
      	 3 -> {
           	var amount: Int
@@ -106,7 +106,7 @@ fun mainProgram() {
               }
       		
               print("\nDo you want to continue? (Y/N): ")
-              (readLine()!!.toLowerCase().trimIndent() == "n") && break
+              (readLine()!!.lowercase().trimIndent() == "n") && break
       		
      	 }
      	 4 -> {
@@ -134,7 +134,7 @@ fun mainProgram() {
               }
       		
               print("\nDo you want to continue? (Y/N): ")
-              (readLine()!!.toLowerCase().trimIndent() == "n") && break
+              (readLine()!!.lowercase().trimIndent() == "n") && break
     	  	
      	 }
      	 5 -> {
@@ -145,7 +145,7 @@ fun mainProgram() {
       	}
       	6 -> {
           	print("\nAre you sure you want to logout? (Y/N): ")
-              if(readLine()!!.toLowerCase().trimIndent() == "y") {
+              if(readLine()!!.lowercase().trimIndent() == "y") {
               	println("\nThank you for confirming..")
               	println("Logout successfully!")
                   break
